@@ -1,12 +1,21 @@
 function TodoCard(props) {
   return (
-    <div class="container mt-1">
-      <div class="card">
-        <div class="card-body d-flex">
-          <div class="flex-grow-1">
+    <div className="container mt-1">
+      <div
+        className="card text-white border border-white"
+        style={{
+          backgroundColor: props.index % 2 === 0 ? "#9FA6B2" : "#332D2D",
+        }}
+      >
+        <div className="card-body d-flex">
+          <div className="flex-grow-1">
             <p>{props.task}</p>
           </div>
-          <button type="button" class="btn btn-danger ml-0">
+          <button
+            type="button"
+            className="btn btn-info ml-0 text-white"
+            onClick={props.delete}
+          >
             X
           </button>
         </div>
